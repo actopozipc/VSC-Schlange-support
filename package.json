@@ -3,6 +3,11 @@
     "displayName": "Schlange (German Python)",
     "description": "Syntax highlighting for Python with German keywords.",
     "version": "0.0.1",
+    "publisher": "actopozipc",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/actopozipc/VSC-Schlange-support.git"
+    },
     "engines": {
         "vscode": "^1.0.0"
     },
