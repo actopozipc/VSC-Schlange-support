@@ -1,0 +1,109 @@
+{
+    "scopeName": "source.schlange",
+    "fileTypes": ["sch"],
+    "patterns": [
+      {
+        "include": "#comments"
+      },
+      {
+        "include": "#strings"
+      },
+      {
+        "include": "#keywords"
+      },
+      {
+        "include": "#operators"
+      },
+      {
+        "include": "#numbers"
+      },
+      {
+        "include": "#variables"
+      }
+    ],
+    "repository": {
+      "comments": {
+        "patterns": [
+          {
+            "name": "comment.block.documentation.schlange",
+            "begin": "'''",
+            "end": "'''"
+          },
+          {
+            "name": "comment.line.number-sign.schlange",
+            "match": "#.*$"
+          }
+        ]
+      },
+      "strings": {
+        "patterns": [
+          {
+            "name": "string.quoted.single.schlange",
+            "begin": "'",
+            "end": "'",
+            "patterns": [
+              {
+                "name": "constant.character.escape.schlange",
+                "match": "\\\\."
+              }
+            ]
+          },
+          {
+            "name": "string.quoted.double.schlange",
+            "begin": "\"",
+            "end": "\"",
+            "patterns": [
+              {
+                "name": "constant.character.escape.schlange",
+                "match": "\\\\."
+              }
+            ]
+          }
+        ]
+      },
+      "keywords": {
+        "match": "\\b(und|als|prüfe|asynch|erwarte|brechen|Klasse|fortsetze|def|lösche|andernfalls|sonst|Ausnahme|Falsch|schlussendlich|für|von|global|wenn|importiere|in|ist|lambda|Nichts|nichtlokal|nicht|oder|passe|erhöhe|Rückkehr|Wahr|versuche|solange|mit|erzeuge)\\b",
+        "name": "keyword.control.schlange"
+      },
+      "operators": {
+        "match": "\\b(und|oder|nicht|in|ist|als)\\b",
+        "name": "keyword.operator.schlange"
+      },
+      "numbers": {
+        "match": "\\b\\d+\\b",
+        "name": "constant.numeric.schlange"
+      },
+      "variables": {
+        "match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\b",
+        "name": "variable.schlange"
+      },
+      
+      "functions": {
+        "patterns": [
+          {
+            "name": "entity.name.function.schlange",
+            "match": "\\bdef\\s+([a-zA-Z_][a-zA-Z0-9_]*)\\s*\\(.*?\\)",
+            "captures": {
+              "1": {
+                "name": "entity.name.function.schlange"
+              }
+            },
+            "beginCaptures": {
+              "0": {
+                "name": "storage.type.function.schlange"
+              }
+            },
+            "end": "\\)",
+            "patterns": [
+              {
+                "include": "#variables"
+              }
+            ]
+          }
+     ]}
+    }
+  }
+
+      
+  
+  

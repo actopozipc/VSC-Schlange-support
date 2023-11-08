@@ -1,0 +1,26 @@
+{
+    "name": "schlange-syntax",
+    "displayName": "Schlange (German Python)",
+    "description": "Syntax highlighting for Python with German keywords.",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.0.0"
+    },
+    "categories": ["Programming Languages"],
+    "contributes": {
+        "languages": [
+            {
+                "id": "schlange",
+                "aliases": ["Schlange"],
+                "extensions": ["sch"]
+            }
+        ],
+        "grammars": [
+            {
+                "language": "schlange",
+                "scopeName": "source.schlange",
+                "path": "./syntaxes/schlange.tmLanguage.json"
+            }
+        ]
+    }
+}
